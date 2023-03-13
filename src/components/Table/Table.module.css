@@ -1,0 +1,58 @@
+.table {
+  width: 100%;
+  padding-top: 4rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.table header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.table header div {
+  display: flex;
+  gap: 8px;
+}
+
+.table header p {
+  color: var(--blue);
+}
+
+.table header p {
+  color: var(--purple);
+}
+
+.table header strong {
+  width: 25px;
+  height: 19px;
+  padding: 2px 8px;
+  border-radius: 999px;
+
+  background: var(--gray-400);
+  color: var(--gray-200);
+
+  display: flex;
+  justify-content: center;
+}
+
+.table body {
+  height: 15rem;
+  border-radius: 8px;
+
+  border-top: 1px solid var(--gray-400);
+  color: var(--gray-300);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table body p {
+  margin-top: 16px;
+  font-weight: bold;
+}
