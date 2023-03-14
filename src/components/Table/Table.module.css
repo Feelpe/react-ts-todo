@@ -1,33 +1,30 @@
-.table {
+.list {
   width: 100%;
   padding-top: 4rem;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
-.table header {
+.list header {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
-.table header div {
+.list header div {
   display: flex;
   gap: 8px;
 }
 
-.table header p {
+.list > header div {
   color: var(--blue);
 }
 
-.table header p {
+.list header div:nth-of-type(even) {
   color: var(--purple);
 }
 
-.table header strong {
-  width: 25px;
+.list header strong {
+  min-width: 25px;
+  width: auto;
   height: 19px;
   padding: 2px 8px;
   border-radius: 999px;
@@ -36,23 +33,66 @@
   color: var(--gray-200);
 
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.table body {
-  height: 15rem;
+.list body {
   border-radius: 8px;
-
   border-top: 1px solid var(--gray-400);
   color: var(--gray-300);
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
 
-.table body p {
-  margin-top: 16px;
+.list body div {
+  height: 100%;
+  width: 46rem;
+  padding: 16px;
+  gap: 12px;
+  margin-bottom: 12px; 
+  border-radius: 8px;
+
+  background: var(--gray-500);
+  color: var(--gray-100);
+  border: 1px solid var(--gray-400);
+
+  display: grid;
+  grid-template-columns: 1fr 100fr 1fr;
+  align-items: flex-start;
+}
+
+.list body button {
+  height: 24px;
+  width: 24px;
+  color: var(--gray-300);
+
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list body button:hover {
+  color: var(--danger);
+}
+
+.list footer {
+  height: 15.25rem;
+  color: var(--gray-300);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list footer p {
+  margin-top: 1rem;
   font-weight: bold;
 }

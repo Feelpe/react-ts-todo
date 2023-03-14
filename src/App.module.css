@@ -1,6 +1,12 @@
 .container {
   max-width: 46rem;
   margin: 0 auto;
+  margin-top: -25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {
