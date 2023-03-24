@@ -1,0 +1,33 @@
+.status {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+.status div {
+  display: flex;
+  gap: 8px;
+}
+
+.status > div {
+  color: var(--blue);
+}
+
+.status div:nth-of-type(even) {
+  color: var(--purple);
+}
+
+.status strong {
+  min-width: 25px;
+  width: auto;
+  height: 19px;
+  padding: 2px 8px;
+  border-radius: 999px;
+
+  background: var(--gray-400);
+  color: var(--gray-200);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

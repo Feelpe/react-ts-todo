@@ -1,54 +1,4 @@
-.list {
-  width: 100%;
-  padding-top: 4rem;
-}
-
-.list header {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1.5rem;
-}
-
-.list header div {
-  display: flex;
-  gap: 8px;
-}
-
-.list > header div {
-  color: var(--blue);
-}
-
-.list header div:nth-of-type(even) {
-  color: var(--purple);
-}
-
-.list header strong {
-  min-width: 25px;
-  width: auto;
-  height: 19px;
-  padding: 2px 8px;
-  border-radius: 999px;
-
-  background: var(--gray-400);
-  color: var(--gray-200);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.list body {
-  border-radius: 8px;
-  border-top: 1px solid var(--gray-400);
-  color: var(--gray-300);
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-.list body div {
+.task {
   height: 100%;
   width: 46rem;
   padding: 16px;
@@ -62,10 +12,10 @@
 
   display: grid;
   grid-template-columns: 1fr 100fr 1fr;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.list body button {
+.task button {
   height: 24px;
   width: 24px;
   color: var(--gray-300);
@@ -78,21 +28,7 @@
   justify-content: center;
 }
 
-.list body button:hover {
+.task button:hover {
   color: var(--danger);
 }
 
-.list footer {
-  height: 15.25rem;
-  color: var(--gray-300);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.list footer p {
-  margin-top: 1rem;
-  font-weight: bold;
-}
