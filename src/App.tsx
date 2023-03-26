@@ -1,4 +1,10 @@
-import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  InvalidEvent,
+  useEffect,
+  useState,
+} from "react";
 import { PlusCircle } from "@phosphor-icons/react";
 
 import { Header } from "./components/Header";
@@ -17,6 +23,10 @@ export interface TaskType {
 export function App() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [newTask, setNewTask] = useState("");
+
+  useEffect(() => {
+    console.log(tasks);
+  }, [tasks]);
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
@@ -42,13 +52,13 @@ export function App() {
 
   function updateTaskStatus(task: TaskType) {
     const taskFiltered = tasks.filter((taskToFilter) => {
-      task.id !== taskToFilter.id;
+      return task.id !== taskToFilter.id;
     });
 
     const updatedTask = {
       id: task.id,
       text: task.text,
-      status: task.status,
+      status: !task.status,
     };
 
     setTasks([...taskFiltered, updatedTask]);

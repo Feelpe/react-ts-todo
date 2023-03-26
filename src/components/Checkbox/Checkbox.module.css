@@ -9,7 +9,6 @@
 }
 
 .uncheck {
-  /* background: transparent; */
   border: 2px solid var(--blue) !important;
 }
 

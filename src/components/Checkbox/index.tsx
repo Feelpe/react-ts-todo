@@ -9,30 +9,30 @@ interface CheckBoxProps {
   updateTaskStatus: (task: TaskType) => void;
 }
 
-export function CheckedBox({ task, updateTaskStatus }: CheckBoxProps) {
+export function CheckBox({ task, updateTaskStatus }: CheckBoxProps) {
   return (
-    <Checkbox.Root
-      checked={task.status}
-      className={`${styles.checkbox} ${styles.checked}`}
-      onCheckedChange={() => updateTaskStatus(task)}
-    >
-      <Checkbox.Indicator>
-        <Check size={14} className={styles.check} />
-      </Checkbox.Indicator>
-    </Checkbox.Root>
-  );
-}
-
-export function UnCheckBox({ task, updateTaskStatus }: CheckBoxProps) {
-  return (
-    <Checkbox.Root
-      checked={task.status}
-      className={`${styles.checkbox} ${styles.uncheck}`}
-      onCheckedChange={() => updateTaskStatus(task)}
-    >
-      <Checkbox.Indicator>
-        <Check size={14} className={styles.check} />
-      </Checkbox.Indicator>
-    </Checkbox.Root>
+    <>
+      {task.status ? (
+        <Checkbox.Root
+          checked={task.status}
+          className={`${styles.checkbox} ${styles.checked}`}
+          onCheckedChange={() => updateTaskStatus(task)}
+        >
+          <Checkbox.Indicator>
+            <Check size={14} className={styles.check} />
+          </Checkbox.Indicator>
+        </Checkbox.Root>
+      ) : (
+        <Checkbox.Root
+          checked={task.status}
+          className={`${styles.checkbox} ${styles.uncheck}`}
+          onCheckedChange={() => updateTaskStatus(task)}
+        >
+          <Checkbox.Indicator>
+            <Check size={14} className={styles.check} />
+          </Checkbox.Indicator>
+        </Checkbox.Root>
+      )}
+    </>
   );
 }
