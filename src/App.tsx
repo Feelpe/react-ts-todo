@@ -8,14 +8,14 @@ import { Footer } from "./components/Footer";
 
 import styles from "./App.module.css";
 
-export interface taskType {
+export interface TaskType {
   id: number;
   text: string;
   status: boolean;
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<taskType[]>([]);
+  const [tasks, setTasks] = useState<TaskType[]>([]);
   const [newTask, setNewTask] = useState("");
 
   function handleCreateNewTask(event: FormEvent) {
@@ -38,6 +38,20 @@ export function App() {
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLInputElement>) {
     event.target.setCustomValidity("Esse campo é obrigatório!");
+  }
+
+  function updateTaskStatus(task: TaskType) {
+    const taskFiltered = tasks.filter((taskToFilter) => {
+      task.id !== taskToFilter.id;
+    });
+
+    const updatedTask = {
+      id: task.id,
+      text: task.text,
+      status: task.status,
+    };
+
+    setTasks([...taskFiltered, updatedTask]);
   }
 
   function deleteTask(taskIdToDelete: number) {
@@ -74,7 +88,11 @@ export function App() {
           {tasks.length ? (
             <article>
               {tasks.map((task) => (
-                <Table task={task} deleteTask={deleteTask} />
+                <Table
+                  task={task}
+                  updateTaskStatus={updateTaskStatus}
+                  deleteTask={deleteTask}
+                />
               ))}
             </article>
           ) : (

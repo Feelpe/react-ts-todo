@@ -1,17 +1,18 @@
 import { Trash } from "@phosphor-icons/react";
-import { CheckBox } from "../Checkbox";
-import { taskType } from "../../App";
+import { CheckedBox } from "../Checkbox";
+import { TaskType } from "../../App";
 import styles from "./Table.module.css";
 
 interface taskProps {
-  task: taskType;
+  task: TaskType;
+  updateTaskStatus: (task: TaskType) => void;
   deleteTask: (id: number) => void;
 }
 
-export function Table({ task, deleteTask }: taskProps) {
+export function Table({ task, updateTaskStatus, deleteTask }: taskProps) {
   return (
     <div className={styles.task}>
-      <CheckBox />
+      <CheckedBox task={task} updateTaskStatus={updateTaskStatus} />
       <p>{task.text}</p>
       <button onClick={() => deleteTask(task.id)}>
         <Trash size={24} weight="bold" />
