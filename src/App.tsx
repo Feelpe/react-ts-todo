@@ -24,10 +24,6 @@ export function App() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [newTask, setNewTask] = useState("");
 
-  useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
-
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
 
@@ -81,19 +77,19 @@ export function App() {
       <Header />
 
       <div className={styles.container}>
-        <form className={styles.form}>
-          <input
-            type="text"
-            placeholder="Adicionar uma nova task"
-            value={newTask}
-            onChange={handleNewTaskChange}
-            onInvalid={handleNewTaskInvalid}
-          />
-          <button onClick={handleCreateNewTask}>
-            Criar <PlusCircle size={16} weight="bold" />
-          </button>
-        </form>
         <main>
+          <form className={styles.form}>
+            <input
+              type="text"
+              placeholder="Adicionar uma nova task"
+              value={newTask}
+              onChange={handleNewTaskChange}
+              onInvalid={handleNewTaskInvalid}
+            />
+            <button onClick={handleCreateNewTask}>
+              Criar <PlusCircle size={16} weight="bold" />
+            </button>
+          </form>
           <StatusBar created={tasks.length} completed={completedTasks.length} />
           {tasks.length ? (
             <article>
