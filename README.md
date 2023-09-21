@@ -38,7 +38,7 @@ yarn install
 yarn dev
 ```
 
-5. Then the application will open automatically in http://localhost:3001 in your browser. If doesn't then click [here](http://localhost:3001).
+5. Then open the application at [http://localhost:5173](http://localhost:5173) in your web browser. 
 
 ## Usage
 
