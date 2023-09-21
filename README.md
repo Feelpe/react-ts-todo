@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository
 
 ```
-git clone https://github.com/<Your Github Username>/vite-react-ts-todo.git
+git clone https://github.com/Feelpe/react-ts-todo.git
 ```
 
 2. Enter the project directory:
