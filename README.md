@@ -1,5 +1,10 @@
 # React TypeScript ToDo
 
+![react.js](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+![react-ts-todo](https://i.imgur.com/hYep8zp.gif)
+
 ## Description
 
 A simple ToDo list application built with React, Vite, and TypeScript.
